@@ -1,0 +1,10 @@
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/uninstall.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/crane_x7_serving_food_examples_uninstall.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/plate_pick_and_move.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/test.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/edit_cache.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/rebuild_cache.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/list_install_components.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/install.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/install/local.dir
+/home/adrobo/ros2_ws/src/crane_x7_serving_food_examples/build/crane_x7_serving_food_examples/CMakeFiles/install/strip.dir

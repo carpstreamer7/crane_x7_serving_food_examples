@@ -22,31 +22,31 @@ find_package(rclcpp REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
 # ここから
-add_executable(blue_color_detection
-  src/blue_color_detection.cpp
-)
-ament_target_dependencies(blue_color_detection
-    cv_bridge
-    geometry_msgs
-    image_geometry
-    moveit_ros_planning_interface
-    OpenCV
-    rclcpp
-    tf2_geometry_msgs
-)
+#add_executable(blue_color_detection
+#  src/blue_color_detection.cpp
+#)
+#ament_target_dependencies(blue_color_detection
+#    cv_bridge
+#    geometry_msgs
+#   image_geometry
+#   moveit_ros_planning_interface
+#    OpenCV
+#   rclcpp
+#   tf2_geometry_msgs
+#)
 # ここまででコードに必要なものを記述
-add_executable(yellow_color_detection
-  src/yellow_color_detection.cpp
-)
-ament_target_dependencies(yellow_color_detection
-    cv_bridge
-    geometry_msgs
-    image_geometry
-    moveit_ros_planning_interface
-    OpenCV
-    rclcpp
-    tf2_geometry_msgs
-)
+#add_executable(yellow_color_detection
+#  src/yellow_color_detection.cpp
+#)
+#ament_target_dependencies(yellow_color_detection
+#    cv_bridge
+#   geometry_msgs
+#   image_geometry
+#   moveit_ros_planning_interface
+#   OpenCV
+#   rclcpp
+#   tf2_geometry_msgs
+#)
 add_executable(plate_pick_and_move
   src/plate_pick_and_move.cpp
 )
@@ -59,53 +59,54 @@ ament_target_dependencies(plate_pick_and_move
     rclcpp
     tf2_geometry_msgs
 )
-add_executable(plate_blue_pick_and_move_tf
-  src/plate_blue_pick_and_move_tf.cpp
-)
-ament_target_dependencies(plate_blue_pick_and_move_tf
-    cv_bridge
-    geometry_msgs
-    image_geometry
-    moveit_ros_planning_interface
-    OpenCV
-    rclcpp
-    tf2_geometry_msgs
-)
-add_executable(plate_yellow_pick_and_move_tf
-  src/plate_yellow_pick_and_move_tf.cpp
-)
-ament_target_dependencies(plate_yellow_pick_and_move_tf
-    cv_bridge
-    geometry_msgs
-    image_geometry
-    moveit_ros_planning_interface
-    OpenCV
-    rclcpp
-    tf2_geometry_msgs
-)
+#add_executable(plate_blue_pick_and_move_tf
+#  src/plate_blue_pick_and_move_tf.cpp
+#)
+#ament_target_dependencies(plate_blue_pick_and_move_tf
+#   cv_bridge
+#   geometry_msgs
+#   image_geometry
+#   moveit_ros_planning_interface
+#   OpenCV
+#   rclcpp
+#   tf2_geometry_msgs
+#)
+
+#add_executable(plate_yellow_pick_and_move_tf
+#  src/plate_yellow_pick_and_move_tf.cpp
+#)
+#ament_target_dependencies(plate_yellow_pick_and_move_tf
+#cv_bridge
+#   geometry_msgs
+#   image_geometry
+#   moveit_ros_planning_interface
+#   OpenCV
+#   rclcpp
+#   tf2_geometry_msgs
+#)
 
 # src下のソースコードはTARGETSで
 # launch下のlaunchファイルはDIRECTORYで
-install(TARGETS
-  blue_color_detection
-  DESTINATION lib/${PROJECT_NAME}/
-)
-install(TARGETS
-  yellow_color_detection
-  DESTINATION lib/${PROJECT_NAME}/
-)
+#install(TARGETS
+# blue_color_detection
+# DESTINATION lib/${PROJECT_NAME}/
+#)
+#install(TARGETS
+#  yellow_color_detection
+#  DESTINATION lib/${PROJECT_NAME}/
+#)
 install(TARGETS
   plate_pick_and_move 
   DESTINATION lib/${PROJECT_NAME}/
 )
-install(TARGETS
-  plate_blue_pick_and_move_tf
-  DESTINATION lib/${PROJECT_NAME}/
-)
-install(TARGETS
-  plate_yellow_pick_and_move_tf
-  DESTINATION lib/${PROJECT_NAME}/
-)
+#install(TARGETS
+#  plate_blue_pick_and_move_tf
+# DESTINATION lib/${PROJECT_NAME}/
+#)
+#install(TARGETS
+#  plate_yellow_pick_and_move_tf
+#  DESTINATION lib/${PROJECT_NAME}/
+#)
 
 install(DIRECTORY
   launch

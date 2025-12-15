@@ -36,6 +36,7 @@ int main(int argc, char ** argv)
   rclcpp::NodeOptions node_options;
   node_options.automatically_declare_parameters_from_overrides(true);
   auto move_group_arm_node = rclcpp::Node::make_shared("move_group_arm_node", node_options);
+  
   auto move_group_gripper_node = rclcpp::Node::make_shared("move_group_gripper_node", node_options);
   // For current state monitor
   rclcpp::executors::SingleThreadedExecutor executor;
