@@ -85,6 +85,20 @@ ament_target_dependencies(plate_pick_and_move
 #   tf2_geometry_msgs
 #)
 
+add_executable(color_detection
+  src/color_detection.cpp
+)
+
+ament_target_dependencies(color_detection
+  rclcpp
+  sensor_msgs
+  cv_bridge
+  OpenCV
+  tf2_ros
+  geometry_msgs
+)
+
+
 # src下のソースコードはTARGETSで
 # launch下のlaunchファイルはDIRECTORYで
 #install(TARGETS
@@ -107,6 +121,13 @@ install(TARGETS
 #  plate_yellow_pick_and_move_tf
 #  DESTINATION lib/${PROJECT_NAME}/
 #)
+
+install(TARGETS
+  color_detection
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
 
 install(DIRECTORY
   launch
