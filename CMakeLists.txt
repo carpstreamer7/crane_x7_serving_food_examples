@@ -14,6 +14,9 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(cv_bridge REQUIRED)
+#NEW
+find_package(image_geometry REQUIRED)
+
 find_package(geometry_msgs REQUIRED)
 find_package(image_geometry REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
@@ -96,7 +99,8 @@ ament_target_dependencies(color_detection
   OpenCV
   tf2_ros
   geometry_msgs
-)
+  image_geometry #追加
+  )
 
 
 # src下のソースコードはTARGETSで
