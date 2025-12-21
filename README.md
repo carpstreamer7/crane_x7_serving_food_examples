@@ -1,6 +1,8 @@
 # crane_x7_ serving_food_examples
 千葉工業大学未来ロボティクス学科の設計製作論3で作成したリポジトリです.  
-このパッケージは, ロボットアーム(CRANE-X7)単独での皿のピッキングとRGBDセンサ(RealSenseD435)を併用した色付き皿のピッキングを行うコードをまとめたROS 2パッケージです.
+以下のリポジトリをもとに作成しました。（https://github.com/bloodlemon2/crane_x7_serving_food_examples/blob/main/README.md?plain=1）
+
+このパッケージは, ロボットアーム(CRANE-X7)単独でのブロックのピッキングとRGBDセンサ(RealSenseD435)を併用したブロックのピッキングを行うコードをまとめたROS 2パッケージです.
 ## このパッケージを使用する前に
 ### 使用環境
 - Ubuntu 22.04 LTS
