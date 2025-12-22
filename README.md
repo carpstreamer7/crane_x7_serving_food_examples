@@ -71,12 +71,12 @@ $ realsense-viewer
 - camera_blue_plate_picking
 - camera_yellow_plate_picking
 ## 用意が必要な物
-- お皿(口径140mm)
+- ブロック
 - 色紙(青色, 黄色)
 - のりまたはテープ
 
-お皿は100円ショップなどにあるペーパーボウルを使うと良いです.  
-色紙をお皿に貼り付けて色付き皿を作成することで, 色認識でお皿を配膳できます.  
+
+色紙をブロックに貼り付けて作成することで, 色認識で箱をつかむことができます.  
 お皿のサイズを変える場合には[これらのコード](https://github.com/bloodlemon2/crane_x7_serving_food_examples/tree/main/src)に変更を加える必要があります.
 ## インストール方法
 ```
@@ -101,9 +101,8 @@ $ source ~/.bashrc
 シミュレータ(Gazebo)を使用する場合は[こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#1-move_group%E3%81%A8gazebo%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B), 実機(CRANE-X7)を使用する場合は[こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください.
 
 ## plate_pick_and_move
-特定の場所にあるお皿を掴み, 配膳するコードです.  
-Gazeboで実行する場合, [crane_x7_ros/crane_x7_gazebo/worlds/table.sdf](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_gazebo/worlds/table.sdf)から木のブロックを削除して, お皿のモデルを追加する必要があります. table.sdfの内容を[こちら](https://github.com/bloodlemon2/crane_x7_serving_food_examples/blob/gazebo/worlds/table.sdf)に変更してから実行してください.  
-また, [plate_pick_and_move.cpp](https://github.com/bloodlemon2/crane_x7_serving_food_examples/blob/main/src/plate_pick_and_move.cpp)の103行目をz = 0.09に変更してください.  
+複数の箱の色を判別してを持ち上げて, 積み上げるコードです.  
+  
 次のコマンドで実行できます.
 - Gazeboで実行する場合
 ```
@@ -114,28 +113,17 @@ ros2 launch crane_x7_serving_food_examples plate_pick_and_move.launch.py use_sim
 ```
 ros2 launch crane_x7_serving_food_examples plate_pick_and_move.launch.py
 ```
-#### plate_pick_and_moveのデモ動画
-https://github.com/user-attachments/assets/02dbadf3-9645-4934-8fe8-8588b7e20cdd
 
-## camera_blue_plate_picking
-RGBDセンサを用いて青色のお皿を掴み, 配膳するコードです.  
+## camera_color_pleate_picking
+色依存をlaunch引数にしてパラーメータにより色の切り替えをします。 
 RealSenseを接続して実機で実行します. [こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#realsense-d435%E3%83%9E%E3%82%A6%E3%83%B3%E3%82%BF%E6%90%AD%E8%BC%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)の'RealSense D435マウンタ搭載モデルを使用する場合'からRVizを起動してから実行してください.  
 次のコマンドで実行できます.
 ```
-ros2 launch crane_x7_serving_food_examples camera_blue_plate_picking.launch.py
+ros2 launch crane_x7_serving_food_examples camera_color_plate_picking.launch.py
 ```
-#### camera_blue_plate_pickingのデモ動画
-https://github.com/user-attachments/assets/53df314e-9f4c-49b6-84e4-77aebbd0b484
 
-## camera_yellow_plate_picking
-RGBDセンサを用いて黄色のお皿を掴み, 配膳するコードです.  
-RealSenseを接続して実機で実行します. [こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#realsense-d435%E3%83%9E%E3%82%A6%E3%83%B3%E3%82%BF%E6%90%AD%E8%BC%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)のRealSense D435マウンタ搭載モデルを使用する場合でRVizを起動してから実行してください.  
-次のコマンドで実行できます.
-```
-ros2 launch crane_x7_serving_food_examples camera_yellow_plate_picking.launch.py
-```
-#### camera_yellow_plate_pickingのデモ動画
-https://github.com/user-attachments/assets/8e64dbc9-8338-427f-81ba-7d680a01fc7c
+
+
 # 引継ぎ事項
 ## 発生する可能性のあるエラーと解決法
 - RVizに二値化の画像がでない
