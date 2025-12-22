@@ -75,7 +75,7 @@ $ realsense-viewer
 - camera_blue_plate_picking
 - camera_yellow_plate_picking
 ## 用意が必要な物
-- 正方形もの（発泡スチロール等）
+- 正方形のもの（発泡スチロール等）
 - 色紙（青、赤、黄）
 - のりまたはテープ
 
@@ -138,8 +138,6 @@ RealSenseを接続して実機で実行します. [こちら](https://github.com
 ```
 ros2 launch crane_x7_serving_food_examples camera_yellow_plate_picking.launch.py
 ```
-#### camera_yellow_plate_pickingのデモ動画
-https://github.com/user-attachments/assets/8e64dbc9-8338-427f-81ba-7d680a01fc7c
 # 引継ぎ事項
 ## 発生する可能性のあるエラーと解決法
 - RVizに二値化の画像がでない
