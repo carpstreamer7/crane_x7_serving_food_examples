@@ -72,8 +72,6 @@ $ realsense-viewer
 色検出・把持動作・MoveIt制御の参考として提供されているサンプルである。
 ## 使用できるサンプル
 - plate_pick_and_move
-- camera_blue_plate_picking
-- camera_yellow_plate_picking
 ## 用意が必要な物
 - 正方形のもの（発泡スチロール等）
 - 色紙（青、赤、黄）
@@ -118,36 +116,12 @@ ros2 launch crane_x7_serving_food_examples plate_pick_and_move.launch.py use_sim
 ```
 ros2 launch crane_x7_serving_food_examples plate_pick_and_move.launch.py
 ```
-## camera_blue_plate_picking
-RGBDセンサを用いて青色のお皿を掴み, 配膳するコードです.  
-RealSenseを接続して実機で実行します. [こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#realsense-d435%E3%83%9E%E3%82%A6%E3%83%B3%E3%82%BF%E6%90%AD%E8%BC%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)の'RealSense D435マウンタ搭載モデルを使用する場合'からRVizを起動してから実行してください.  
-次のコマンドで実行できます.
-```
-ros2 launch crane_x7_serving_food_examples camera_blue_plate_picking.launch.py
-```
 
-
-## camera_yellow_plate_picking
-RGBDセンサを用いて黄色のお皿を掴み, 配膳するコードです.  
-RealSenseを接続して実機で実行します. [こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#realsense-d435%E3%83%9E%E3%82%A6%E3%83%B3%E3%82%BF%E6%90%AD%E8%BC%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)のRealSense D435マウンタ搭載モデルを使用する場合でRVizを起動してから実行してください.  
-次のコマンドで実行できます.
-```
-ros2 launch crane_x7_serving_food_examples camera_yellow_plate_picking.launch.py
-```
 # 引継ぎ事項
-## 発生する可能性のあるエラーと解決法
-- RVizに二値化の画像がでない
-    - ROS 2インストール時にOpenCVがインストールされています. 自分で新たにOpenCVをインストールすると異なるバージョンが競合して, RVizに二値化の画像がでなくなることがあります.
-    - OpenCVが異なるバージョンが競合していると, ビルドするときにも警告がでます.
-    - 自分でインストールしたバージョンのOpenCVアンインストールすることをおすすめします.
+## エラーと解決法
+- 実行が不可
 ## やり残したこと
-- GitHub Actionsでのテスト
-- GazeboにCADで作成したモデルの追加
-- Gazebo上でRealSenseの動作
-- [Gazeboで実行する場合](https://github.com/bloodlemon2/crane_x7_serving_food_examples?tab=readme-ov-file#plate_pick_and_move)でお皿を追加してGazeboを起動するとエラー
-    - '[ign gazebo -r-1] [Err] [SystemPaths.cc:473] Could not resolve file [texture.png]'というエラー内容.
-    - シミュレーションをするときに, アームと皿のあたり判定などの問題は無い
-- 一つのプログラムで複数の色を認識し, 色ごとに動作を変える.
+- 
 # ライセンス
 - このパッケージはRT Corporationの公開する[パッケージ](https://github.com/rt-net/crane_x7_ros/tree/ros2)の以下の5つファイルを改変して作成されています.
     - [camera_example.launch.py](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/launch/camera_example.launch.py)
