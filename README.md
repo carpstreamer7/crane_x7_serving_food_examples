@@ -103,7 +103,7 @@ $ source ~/.bashrc
 シミュレータ(Gazebo)を使用する場合は[こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#1-move_group%E3%81%A8gazebo%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B), 実機(CRANE-X7)を使用する場合は[こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください.
 
 ## plate_pick_and_move
-特定の場所にあるお皿を掴み, 配膳するコードです.  
+特定の場所にあるキューブを掴み, 配膳するコードです.  
 Gazeboで実行する場合, [crane_x7_ros/crane_x7_gazebo/worlds/table.sdf](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_gazebo/worlds/table.sdf)から木のブロックを削除して, お皿のモデルを追加する必要があります. table.sdfの内容を[こちら](https://github.com/bloodlemon2/crane_x7_serving_food_examples/blob/gazebo/worlds/table.sdf)に変更してから実行してください.  
 また, [plate_pick_and_move.cpp](https://github.com/bloodlemon2/crane_x7_serving_food_examples/blob/main/src/plate_pick_and_move.cpp)の103行目をz = 0.09に変更してください.  
 次のコマンドで実行できます.
