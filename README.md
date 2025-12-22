@@ -118,9 +118,6 @@ ros2 launch crane_x7_serving_food_examples plate_pick_and_move.launch.py use_sim
 ```
 ros2 launch crane_x7_serving_food_examples plate_pick_and_move.launch.py
 ```
-#### plate_pick_and_moveのデモ動画
-https://github.com/user-attachments/assets/02dbadf3-9645-4934-8fe8-8588b7e20cdd
-
 ## camera_blue_plate_picking
 RGBDセンサを用いて青色のお皿を掴み, 配膳するコードです.  
 RealSenseを接続して実機で実行します. [こちら](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_examples/README.md#realsense-d435%E3%83%9E%E3%82%A6%E3%83%B3%E3%82%BF%E6%90%AD%E8%BC%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)の'RealSense D435マウンタ搭載モデルを使用する場合'からRVizを起動してから実行してください.  
