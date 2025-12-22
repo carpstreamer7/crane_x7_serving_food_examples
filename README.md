@@ -68,24 +68,26 @@ $ realsense-viewer
 ```
 
 # このパッケージの使用方法
+これらは、
+色検出・把持動作・MoveIt制御の参考として提供されているサンプルである。
 ## 使用できるサンプル
 - plate_pick_and_move
 - camera_blue_plate_picking
 - camera_yellow_plate_picking
 ## 用意が必要な物
-- お皿(口径140mm)
-- 色紙(青色, 黄色)
+- 正方形もの（発泡スチロール等）
+- 色紙（青、赤、黄）
 - のりまたはテープ
 
-お皿は100円ショップなどにあるペーパーボウルを使うと良いです.  
-色紙をお皿に貼り付けて色付き皿を作成することで, 色認識でお皿を配膳できます.  
-お皿のサイズを変える場合には[これらのコード](https://github.com/bloodlemon2/crane_x7_serving_food_examples/tree/main/src)に変更を加える必要があります.
+正方形のものは100円ショップなどにある発泡スチロールを使うと良いです.  
+色紙をキューブに貼り付けて色付きキューブを作成することで, 色認識でキューブをPick&Moveできます。.  
+箱のサイズを変える場合には[これらのコード](https://github.com/carpstreamer7/crane_x7_serving_food_examples/tree/main/src)に変更を加える必要があります.
 ## インストール方法
 ```
 # このリポジトリをクローン
 # ros2_wsは各自のROS 2のワークスペース名に変更してください
 $ cd ~/ros2_ws/src
-$ git clone https://github.com/bloodlemon2/crane_x7_serving_food_examples.git
+$ git clone https://github.com/carpstreamer7/crane_x7_serving_food_examples.git
 
 # ビルドしてインストール完了
 $ cd ~/ros2_ws
