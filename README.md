@@ -125,8 +125,7 @@ RealSenseを接続して実機で実行します. [こちら](https://github.com
 ```
 ros2 launch crane_x7_serving_food_examples camera_blue_plate_picking.launch.py
 ```
-#### camera_blue_plate_pickingのデモ動画
-https://github.com/user-attachments/assets/53df314e-9f4c-49b6-84e4-77aebbd0b484
+
 
 ## camera_yellow_plate_picking
 RGBDセンサを用いて黄色のお皿を掴み, 配膳するコードです.  
